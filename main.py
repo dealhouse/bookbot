@@ -1,8 +1,6 @@
 with open("./books/frankenstein.txt", "r") as f:
-    # print(f.read())
     words = f.read()
     word_list = words.split()
-    # print(len(word_list))
     lower = words.lower()
     characters = list(lower)
     character_list = {}
@@ -11,7 +9,6 @@ with open("./books/frankenstein.txt", "r") as f:
             character_list[character] = 1
         elif character.isalpha() and character in character_list: 
             character_list[character] += 1
-    # print(character_list)
     sorted_character_list = sorted(character_list.items(), key=lambda item:item[1], 
                                 reverse=True)
     print("--- Begin report of books/frankenstein.txt ---")
